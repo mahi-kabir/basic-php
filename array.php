@@ -24,13 +24,45 @@
     <input type="submit">
  </form> -->
 
+
  <!--<form action  = "array.php" method = "post">
     <input type = 'text' name = 'salaries'>
  <input type="submit">
 </form> -->
 
+<form action  = "array.php" step = '0.001' method = "post">
+   First Number: <input type = 'number' name = 'num1'>
+   operator: <input type = 'text' name = 'op'>
+   Second Number:<input type = 'number' name = 'num2'>
+ <input type="submit">
+
+</form>
 
  <?php
+
+
+//Calculator
+
+    $num1 = $_POST['num1'];
+    $op = $_POST['op'];
+    $num2 = $_POST['num2'];
+
+    if($op == '+'){
+        echo $num1+$num2;
+    } elseif($op == '-'){
+        echo $num1-$num2;
+    } 
+
+    elseif($op = '*'){
+        echo $num1*$num2;
+    }
+
+    elseif($op = '/'){
+        echo $num1/$num2;
+    }
+
+
+
     // $cars = $_POST['cars'];
     // echo $cars[0];
 
@@ -80,21 +112,21 @@
         //     echo "He is tall";
         // }
 
-        function getMin($num1, $num2, $num3){
-            if($num1<$num2 && $num1<$num3){
-                return $num1;
-            }
+        // function getMin($num1, $num2, $num3){
+        //     if($num1>$num2 && $num1>$num3){
+        //         return $num1;
+        //     }
 
-            else if($num2<$num1 && $num2<$num3){
-                return $num2;
-            }
+        //     else if($num2>$num1 && $num2>$num3){
+        //         return $num2;
+        //     }
 
-            else{
-                return $num3;
-            }
-        }
+        //     else{
+        //         return $num3;
+        //     }
+        // }
 
-        echo(getMin(4,3,2));
+        // echo(getMin('asd','erty','pouiyr'));
 
  ?>
 </body>
